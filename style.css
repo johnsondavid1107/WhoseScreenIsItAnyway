@@ -6,6 +6,8 @@
     text-align: center;
     animation-name: blinkingBackground;
     font-size: 5rem;
+    display: block;
+    width: 100%;
 }
 
 .stretch {
@@ -30,3 +32,25 @@
     100%	{ background-color: #04a1d5;}
 
  }
+
+ .fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+  #spot{
+      text-align: center;
+      display: block;
+      font-size: 10rem;
+  }
