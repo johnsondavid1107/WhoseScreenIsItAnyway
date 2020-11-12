@@ -4,7 +4,7 @@ $(document).ready(function () {
         "David J.", "Hever", "Julia", "Julie", "Lohelani", "Maryam", "Richard", "Andrea"];
 
 
-    var newKid = [];
+    
     function textToPage() {
 
         var random = Math.floor(Math.random() * students.length);
@@ -23,12 +23,15 @@ $(document).ready(function () {
         console.log("This has been clicked");
         console.log(choice);
 
-
         document.getElementById("show").style.display = "inline-block";
+        for (let i = 0; i < students.length; i++){
+            let liItem = $("<li>");
+            liItem.html(students[i]);
+            $(".inClass").append(liItem);
 
-
-
-
+        }
+        
+        
 
 
         console.log(students);
@@ -52,6 +55,7 @@ $(document).ready(function () {
         $(".display-4").html("")
         document.getElementById("start").style.display = "inline-block";
         document.getElementById("show").style.display = "none";
+        $(".inClass").html("")
     });
 
 
