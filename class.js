@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    document.getElementById("team").style.display = "none";
+    document.getElementById("teamButton").style.display = "none";
+
     var students = ["Aaron", "Akash", "Anthony", "David B.",
         "David J.", "Hever", "Julia", "Julie", "Lohelani", "Maryam", "Richard", "Andrea"];
 
@@ -35,12 +38,13 @@ $(document).ready(function () {
         }
 
 
-
-
-
         document.getElementById("start").style.display = "none";
         console.log(students);
         console.log(newKid);
+        document.getElementById("team").style.display = "inline-block";
+        document.getElementById("teamButton").style.display = "inline-block";
+        $(".newClassMates").html("Add people here!")
+
     }
 
 
@@ -55,9 +59,12 @@ $(document).ready(function () {
         $("#topdog").removeClass("jumbotron jumbotron-fluid blink-bg");
         $(".display-4").html("");
         $(".whoseInClass").html("");
+        $(".newClassMates").html("")
         document.getElementById("start").style.display = "inline-block";
         document.getElementById("show").style.display = "none";
         $(".inClass").html("")
+        document.getElementById("team").style.display = "none";
+        document.getElementById("teamButton").style.display = "none";
     });
 
 
@@ -68,9 +75,11 @@ $(document).ready(function () {
         let liItem = $("<li>");
         let entry = liItem.html(teamMember);
         $("#peeps").append(entry);
+        $("#team").val("");
 
 
-       console.log(teamMember)
+
+        console.log(teamMember)
 
     })
 
