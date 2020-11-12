@@ -3,8 +3,8 @@ $(document).ready(function () {
     var students = ["Aaron", "Akash", "Anthony", "David B.",
         "David J.", "Hever", "Julia", "Julie", "Lohelani", "Maryam", "Richard", "Andrea"];
 
+    var newKid = [];
 
-    
     function textToPage() {
 
         var random = Math.floor(Math.random() * students.length);
@@ -12,34 +12,35 @@ $(document).ready(function () {
         let choice = students[random];
 
         $(".big").html(choice);
+
         $("#spot").html("");
         $("#fade").addClass("fade-in");
         $("#fade").html("You get to share!");
         $(".big").addClass("fade-in");
         $("#topdog").addClass("jumbotron jumbotron-fluid blink-bg");
         $(".display-4").html("CONGRATULATIONS!!")
+        $(".whoseInClass").html("Classmates:")
         console.log(choice)
+        newKid.push(choice);
         students.splice(random, 1);
         console.log("This has been clicked");
         console.log(choice);
 
         document.getElementById("show").style.display = "inline-block";
-        for (let i = 0; i < students.length; i++){
+        for (let i = 0; i < students.length; i++) {
             let liItem = $("<li>");
             liItem.html(students[i]);
             $(".inClass").append(liItem);
 
         }
-        
-        
 
 
+
+
+
+        document.getElementById("start").style.display = "none";
         console.log(students);
-        
-
-
-
-
+        console.log(newKid);
     }
 
 
@@ -52,7 +53,8 @@ $(document).ready(function () {
         $("#fade").removeClass("fade-in");
         $("#spot").html("Whose Screen Is It Anyway?...")
         $("#topdog").removeClass("jumbotron jumbotron-fluid blink-bg");
-        $(".display-4").html("")
+        $(".display-4").html("");
+        $(".whoseInClass").html("");
         document.getElementById("start").style.display = "inline-block";
         document.getElementById("show").style.display = "none";
         $(".inClass").html("")
@@ -60,7 +62,17 @@ $(document).ready(function () {
 
 
 
+    $(".addTeam").on("click", function () {
+        let teamMember = $("#team").val();
+        students.push(teamMember);
+        let liItem = $("<li>");
+        let entry = liItem.html(teamMember);
+        $("#peeps").append(entry);
 
+
+       console.log(teamMember)
+
+    })
 
 
 });
