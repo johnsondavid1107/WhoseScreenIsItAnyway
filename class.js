@@ -1,12 +1,12 @@
 $(document).ready(function () {
-   
+
     var students = ["Aaron", "Akash", "Anthony", "David B.",
-    "David J.", "Hever", "Julia", "Julie", "Lohelani", "Maryam", "Richard", "Andrea"];
-    
+        "David J.", "Hever", "Julia", "Julie", "Lohelani", "Maryam", "Richard", "Andrea"];
+
 
     var newKid = [];
     function textToPage() {
-        
+
         var random = Math.floor(Math.random() * students.length);
 
         let choice = students[random];
@@ -18,27 +18,23 @@ $(document).ready(function () {
         $(".big").addClass("fade-in");
         $("#topdog").addClass("jumbotron jumbotron-fluid blink-bg");
         $(".display-4").html("CONGRATULATIONS!!")
-
-
+        console.log(choice)
+        students.splice(random, 1);
         console.log("This has been clicked");
-        console.log(students[random]);
+        console.log(choice);
 
-        $(".showButton").html("<button>Show The Blessed</button>");
+
         document.getElementById("show").style.display = "inline-block";
 
-        // const selection = students.filter(
-        //     (item) => {
-        //         return item !== students[random];
-        //     }
-        // )
-        students.splice(students[random],1);
-        newKid.push(students);
+
+
+
 
 
         console.log(students);
-        console.log(newKid);
-       
-       
+        
+
+
 
 
     }
