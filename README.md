@@ -16,10 +16,10 @@ The applicaiton has two buttons on start.  Click go to roll the dice.  The appli
 
 # theNow
 
-Start today!  This applciaiton is handled by David Johnson.  Here is a link!  
+Start today!  This applciaiton is handled by David Johnson.  Here is a link!   https://johnsondavid1107.github.io/WhoseScreenIsItAnyway/
 I can be reached at johnsonDavid1107@gmail.com
 
-<img src="assets/screen.png"
+<img src="Assets/screen.png"
 alt="Screen app picture">
 
 
