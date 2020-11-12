@@ -25,16 +25,18 @@ $(document).ready(function () {
 
         $(".showButton").html("<button>Show The Blessed</button>");
         document.getElementById("show").style.display = "inline-block";
-        const selection = students.filter(
-            (item) => {
-                return item !== students[random];
-            }
-        )
-        // students.splice(students[random],1);
+
+        // const selection = students.filter(
+        //     (item) => {
+        //         return item !== students[random];
+        //     }
+        // )
+        students.splice(students[random],1);
+        newKid.push(students);
 
 
         console.log(students);
-        console.log(selection);
+        console.log(newKid);
        
        
 
