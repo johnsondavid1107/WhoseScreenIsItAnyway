@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
-    document.getElementById("team").style.display = "none";
-    document.getElementById("teamButton").style.display = "none";
+    $(".newClassMates").html("Add people here!")
+    document.getElementById("team").style.display = "inline-block";
+    document.getElementById("teamButton").style.display = "inline-block";
 
     var students = ["Aaron", "Akash", "Anthony", "David B.",
         "David J.", "Hever", "Julia", "Julie", "Lohelani", "Maryam", "Richard", "Andrea"];
@@ -41,9 +42,9 @@ $(document).ready(function () {
         document.getElementById("start").style.display = "none";
         console.log(students);
         console.log(newKid);
-        document.getElementById("team").style.display = "inline-block";
-        document.getElementById("teamButton").style.display = "inline-block";
-        $(".newClassMates").html("Add people here!")
+        document.getElementById("team").style.display = "none";
+        document.getElementById("teamButton").style.display = "none";
+        $(".newClassMates").html("")
 
     }
 
@@ -63,8 +64,9 @@ $(document).ready(function () {
         document.getElementById("start").style.display = "inline-block";
         document.getElementById("show").style.display = "none";
         $(".inClass").html("")
-        document.getElementById("team").style.display = "none";
-        document.getElementById("teamButton").style.display = "none";
+        $(".newClassMates").html("Add people here!")
+        document.getElementById("team").style.display = "inline-block";
+        document.getElementById("teamButton").style.display = "inline-block";
     });
 
 
@@ -72,11 +74,27 @@ $(document).ready(function () {
     $(".addTeam").on("click", function () {
         let teamMember = $("#team").val();
         students.push(teamMember);
-        let liItem = $("<li>");
-        let entry = liItem.html(teamMember);
-        $("#peeps").append(entry);
+        // let liItem = $("<li>");
+        // let entry = liItem.html(teamMember);
+        // $("#peeps").append(entry);
         $("#team").val("");
 
+
+
+        console.log(teamMember)
+
+    })
+
+    $(document).on("keypress", function (e) {
+        if(e.keyCode === 13){
+        let teamMember = $("#team").val();
+        students.push(teamMember);
+        // let liItem = $("<li>");
+        // let entry = liItem.html(teamMember);
+        // $("#peeps").append(entry);
+        $("#team").val("");
+        console.log(e.keCode);
+        }
 
 
         console.log(teamMember)

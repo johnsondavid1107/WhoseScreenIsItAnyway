@@ -4,6 +4,8 @@ The infamous question we ask ourselves each time!  Well, ask no further!
 
 # theWhat
 
+
+
 Whose Screen Is It Anyway is a generic applicaiton that will randomize your team members by name (that you can input yourself) and will give them the esteemed responsibility of sharing their work with the group!
 
 
@@ -23,4 +25,4 @@ I can be reached at johnsonDavid1107@gmail.com
 alt="Screen app picture">
 
 
- 
+ [![Generic badge](https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg)](https://shields.io/)

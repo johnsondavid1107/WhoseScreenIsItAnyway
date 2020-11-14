@@ -13,6 +13,8 @@
 .stretch {
     width: 100%;
     text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .big {
     font-size: 9.0rem;
