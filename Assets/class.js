@@ -1,11 +1,10 @@
 $(document).ready(function () {
 
-    $(".newClassMates").html("Add people here!")
+    $(".newClassMates").html(`Add people here! \n Enter Key works too!`)
     document.getElementById("team").style.display = "inline-block";
     document.getElementById("teamButton").style.display = "inline-block";
 
-    var students = ["Aaron", "Akash", "Anthony", "David B.",
-        "David J.", "Hever", "Julia", "Julie", "Lohelani", "Maryam", "Richard", "Andrea"];
+    var students = [];
 
     var newKid = [];
 
@@ -45,6 +44,7 @@ $(document).ready(function () {
         document.getElementById("team").style.display = "none";
         document.getElementById("teamButton").style.display = "none";
         $(".newClassMates").html("")
+        localStorage.setItem(JSON.stringify("select",students));
 
     }
 
@@ -64,7 +64,7 @@ $(document).ready(function () {
         document.getElementById("start").style.display = "inline-block";
         document.getElementById("show").style.display = "none";
         $(".inClass").html("")
-        $(".newClassMates").html("Add people here!")
+        $(".newClassMates").html("Add people here! \n Enter key works too!")
         document.getElementById("team").style.display = "inline-block";
         document.getElementById("teamButton").style.display = "inline-block";
     });
@@ -78,7 +78,7 @@ $(document).ready(function () {
         // let entry = liItem.html(teamMember);
         // $("#peeps").append(entry);
         $("#team").val("");
-
+        
 
 
         console.log(teamMember)
@@ -86,14 +86,15 @@ $(document).ready(function () {
     })
 
     $(document).on("keypress", function (e) {
-        if(e.keyCode === 13){
-        let teamMember = $("#team").val();
-        students.push(teamMember);
-        // let liItem = $("<li>");
-        // let entry = liItem.html(teamMember);
-        // $("#peeps").append(entry);
-        $("#team").val("");
-        console.log(e.keCode);
+        if (e.keyCode === 13) {
+            let teamMember = $("#team").val();
+            students.push(teamMember);
+            // let liItem = $("<li>");
+            // let entry = liItem.html(teamMember);
+            // $("#peeps").append(entry);
+            $("#team").val("");
+        } else {
+            console.log(e.keyCode);
         }
 
 
